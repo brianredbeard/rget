@@ -1,7 +1,9 @@
+ORG=established
+
 all: 
-	sudo docker build -t quay.io/established/sget .
+	sudo docker build -t quay.io/$(ORG)/sget .
 
 push:
-	sudo docker push quay.io/established/sget:latest
+	sudo docker push quay.io/$(ORG)/sget:latest
 
 .PHONY: all push
